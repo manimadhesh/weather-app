@@ -6,19 +6,21 @@ const temp = document.querySelector(".temp");
 const display = document.querySelector(".display"); 
 
 button.addEventListener("click", function () {
-  fetch('https://api.openweathermap.org/data/2.5/weather?q=' + inputValue.value + '&appid=60ec613bb09f2372e00e7efc4ddc7a50')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=' + inputValue.value + '&units=metric&appid=60ec613bb09f2372e00e7efc4ddc7a50')
     .then(response => response.json())
-    .then(data => {
-      var nameValue = data.name;
-      var descValue = data.weather[0].description;
-      var tempValue = data.main.temp;
+  .then(data => console.log(data)
+    // {
+    //   var nameValue = data.name;
+    //   var descValue = data.weather[0].description;
+    //   var tempValue = `${data.main.temp}°C`;
 
-      name.innerHTML = nameValue;
-      temp.innerHTML = tempValue;
-      desc.innerHTML = descValue;
+    //   name.innerHTML = nameValue;
+    //   temp.innerHTML = tempValue;
+    //   desc.innerHTML = descValue;
 
       
-      display.style.display = "block";
-    })
+    //   display.style.display = "block";
+  // }
+)
     .catch(error => alert("Invalid city name"));
 });
