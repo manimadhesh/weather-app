@@ -12,6 +12,16 @@ body{
   text-align:center;
   margin: 100px 0;
 }
+.desc{
+  font-weight : bold;
+  padding-bottom:16px;
+}
+.temp,.humidity,.wind{
+  padding-bottom:10px;
+  font-weight : bold;
+
+}
+
 input[type="text"]{
 
   height:50px;
@@ -38,6 +48,7 @@ input[type="submit"]{
 
 }
 .display{
+  /* justify-content:left; */
   width: auto;
   display:none;
   text-align:center;
